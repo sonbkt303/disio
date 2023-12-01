@@ -1,5 +1,7 @@
 const XLSX = require("xlsx");
 const fs = require("fs");
+const knex = require("./knex/knex");
+require('dotenv').config();
 
 const START_FILE_KEYWORD_EN = 'Start of the file';
 const START_FILE_KEYWORD_FR = "Début du fichier";
@@ -14,7 +16,6 @@ const writeJsonFile = ({ data = [], fileName = ""}) => {
     if (!fs.existsSync(dir)){
         fs.mkdirSync(dir);
     }
-
     fs.writeFileSync(`./output/${fileName}.json`, JSON.stringify(data));
 
     console.log('Write file successfully');
