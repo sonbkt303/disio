@@ -8,8 +8,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "install-ws": "node install-windows-service.js",
-    "uninstall-ws": "node uninstall-windows.service.js",
+    "install-ws": "node ./window-service/install-windows-service.js",
+    "uninstall-ws": "node ./window-service/uninstall-windows.service.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

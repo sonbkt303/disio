@@ -1,15 +1,14 @@
 let Service = require("node-windows").Service;
 
 const path = require("path");
-const scriptPath = path.join(__dirname, "/app.js");
-
+const scriptPath = path.join(__dirname, "../app.js");
+console.log("scriptPath", scriptPath)
 // Create a new service object
 let svc = new Service({
   name: "Node application as Windows Service test",
   description: "Node application as Windows Service",
   // script: 'C:\\Users\\EVN0031\\Desktop\\Ewoosoft\\repositories\\vtsw\\node-app-ws\\app.js'
   script: scriptPath,
-  mike: "123123123",
   env: [
     // {
     //   name: "HOME",

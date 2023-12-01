@@ -2,7 +2,7 @@ var Service = require('node-windows').Service;
 // Create a new service object
 
 const path = require('path');
-const scriptPath = path.join(__dirname, '/app.js');
+const scriptPath = path.join(__dirname, "../app.js");
 
 var svc = new Service({
   name:'Node application as Windows Service test',
